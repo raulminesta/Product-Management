@@ -1,0 +1,15 @@
+<label>Filter:<input ng-model="searchText"></label>
+<h3>Products</h3>
+<ul ng-repeat="i in [0,1,2,3,4] ">
+<li>{{products[i].pname}} {{products[i].quantity}}</li>
+</ul>
+<h3>Users</h3>
+<ul ng-repeat="i in [0,1,2] ">
+<li>{{customers[i].name}}</li>
+</ul>
+<h3>Recent customers: </h3>
+<div class="recent" 
+   ng-repeat="customer in customers | orderBy: '-created_at' | limitTo: 3" ng-class="{reverse:reverse}">
+   {{customer.name}} {{customer.created_at}}
+</div>
+<div></div>

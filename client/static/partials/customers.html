@@ -1,0 +1,11 @@
+<div>
+<h5>Add a new order</h5>
+<form method="post">
+<label>Customer Name: <input type="text" name="name" ng-model="new_customer.name"></label>
+<input type="submit" value="Add" ng-click="createcustomer(new_customer)">
+</form>
+<label>Filter:<input ng-model="searchText"></label>
+<ul ng-repeat="customer in customers | filter: {name: searchText}">
+<li>{{customer.name}} <button ng-click="removeCustomer(customer._id)">Delete</button></li>
+</ul>
+</div>

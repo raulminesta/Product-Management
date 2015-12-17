@@ -1,0 +1,10 @@
+<h5>Add a new product</h5>
+<form method="post">
+<label>Product Name: <input type="text" name="pname" ng-model="new_product.pname"></label>
+<label>Quantity:<input type='text' name="quantity" ng-model="new_product.quantity"></label>
+<input type="submit" value="Add" ng-click="createproduct(new_product)">
+</form>
+<label>Filter:<input ng-model="searchText"></label>
+<ul ng-repeat="product in products | filter:{name: searchText}">
+<li>{{product.pname}} {{product.quantity}}<button ng-click="removeProduct(product._id)">Delete</button></li>
+</ul>
