@@ -1,8 +1,25 @@
 {
-  "name": "orders",
+  "name": "product_management",
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.2.0",
     "mongoose": "^4.3.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "description": "Single page web app for creating and managing customers, products and orders. Created database schema along with intricate controllers and models for fully functional app" ,
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulminesta/Product-Management.git"
+  },
+  "author": "Raul Inesta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raulminesta/Product-Management/issues"
+  },
+  "homepage": "https://github.com/raulminesta/Product-Management#readme"
 }
