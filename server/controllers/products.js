@@ -31,7 +31,7 @@ module.exports = (function() {
   			console.log(err);
   		}
   		else{
-  			console.log('sucess?')
+  			console.log('Deleted')
   			res.json()
   		}
   	})

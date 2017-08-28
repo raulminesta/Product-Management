@@ -1,4 +1,6 @@
 <label>Filter:<input ng-model="searchText"></label>
+<div class="dash">
+
 <h3>Products</h3>
 <ul ng-repeat="i in [0,1,2,3,4] ">
 <li>{{products[i].pname}} {{products[i].quantity}}</li>
@@ -8,8 +10,9 @@
 <li>{{customers[i].name}}</li>
 </ul>
 <h3>Recent customers: </h3>
-<div class="recent" 
+<div class="recent"
    ng-repeat="customer in customers | orderBy: '-created_at' | limitTo: 3" ng-class="{reverse:reverse}">
    {{customer.name}} {{customer.created_at}}
 </div>
 <div></div>
+</div>

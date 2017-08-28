@@ -1,9 +1,9 @@
-<div>
-<h3>add a new order</h3>
+<div class="orders">
+<h3>Add a New Order</h3>
 <select ng-model="customer" ng-options="customer.name for customer in customers"></select>
 <select ng-model="product" ng-options="product.pname for product in products"></select>
 <button ng-click="associate()">Add Order</button>
-<div ng-repeat="customer in customers">
+<div ng-repeat="customer in customers" class="orderlist">
 {{customer.name}}<br>
 	<div ng-repeat="(x,product) in products">{{customer.product_name[x].pname}} {{customer.product_name[x].quantity}} {{customer.product_name[x].created_at}} <br></div>
 </div>
